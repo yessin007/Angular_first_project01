@@ -15,6 +15,7 @@ export class ProductsComponent implements OnInit {
     {id:3, title: 'T-shirt 3', price :165,quantity :78, like:69},
   ];
 
+
   getColor(){
 
     if(this.price <20) {
