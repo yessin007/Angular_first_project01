@@ -7,6 +7,9 @@ import { ProductsComponent } from './products/products.component';
 import {FormsModule} from "@angular/forms";
 import { OffresEmploiComponentComponent } from './offres-emploi-component/offres-emploi-component.component';
 import { ArticlesComponentComponent } from './articles-component/articles-component.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { NotfoundComponent } from './notfound/notfound.component';
+import { DetailproductComponent } from './detailproduct/detailproduct.component';
 
 
 @NgModule({
@@ -14,7 +17,10 @@ import { ArticlesComponentComponent } from './articles-component/articles-compon
     AppComponent,
     ProductsComponent,
     OffresEmploiComponentComponent,
-    ArticlesComponentComponent
+    ArticlesComponentComponent,
+    NavbarComponent,
+    NotfoundComponent,
+    DetailproductComponent
   ],
   imports: [
     BrowserModule,
