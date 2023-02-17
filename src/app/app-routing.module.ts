@@ -5,6 +5,7 @@ import {OffresEmploiComponentComponent} from "./offres-emploi-component/offres-e
 import {ArticlesComponentComponent} from "./articles-component/articles-component.component";
 import {NotfoundComponent} from "./notfound/notfound.component";
 import {DetailproductComponent} from "./detailproduct/detailproduct.component";
+import {AddproductComponent} from "./addproduct/addproduct.component";
 
 const routes: Routes = [
 
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path:'detailproduct/:id', component:DetailproductComponent},
   {path:'offres', component:OffresEmploiComponentComponent},
   {path:'artticles', component:ArticlesComponentComponent},
+  {path:'addproduct', component:AddproductComponent},
   {path: '**', component: NotfoundComponent}
 ];
 

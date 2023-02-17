@@ -13,6 +13,7 @@ export class DetailproductComponent implements OnInit {
 
   ngOnInit(): void {
     this.id=this.route.snapshot.params['id'];
+
   }
 
 }

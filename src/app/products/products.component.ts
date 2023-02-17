@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Product} from "../core/product";
 //import {Product} from "../core/product";
 
 @Component({
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
-  //productss!:Product[];
+  productss!: Product[];
   categorie : string = "Homme";
   price : number=0;
   products : any [] =[

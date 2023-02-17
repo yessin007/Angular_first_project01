@@ -31,12 +31,5 @@
 
 
 
-  <div *ngFor="let p of products let i=index">
-    <li *ngIf="p.price >price">
-      id: {{p.id}} ** price : {{p.title}} ** price : {{p.price}} ** quantity : {{p.quantity}}  ***** index {{i}}  ******* like {{p.like}}
-      <button [disabled]="p.quantity<=0"  (click)="buy(i)"> buy </button>
-      <button  [disabled]="p.like<=23" (click)="like(i)"> Like !!</button>
-    </li>
 
-  </div>
 </ul>
