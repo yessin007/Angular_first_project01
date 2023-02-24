@@ -11,6 +11,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { DetailproductComponent } from './detailproduct/detailproduct.component';
 import { AddproductComponent } from './addproduct/addproduct.component';
+import { TemplateDrivenFormComponentComponent } from './template-driven-form-component/template-driven-form-component.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { AddproductComponent } from './addproduct/addproduct.component';
     NavbarComponent,
     NotfoundComponent,
     DetailproductComponent,
-    AddproductComponent
+    AddproductComponent,
+    TemplateDrivenFormComponentComponent
   ],
   imports: [
     BrowserModule,

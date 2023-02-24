@@ -6,6 +6,9 @@ import {ArticlesComponentComponent} from "./articles-component/articles-componen
 import {NotfoundComponent} from "./notfound/notfound.component";
 import {DetailproductComponent} from "./detailproduct/detailproduct.component";
 import {AddproductComponent} from "./addproduct/addproduct.component";
+import {
+  TemplateDrivenFormComponentComponent
+} from "./template-driven-form-component/template-driven-form-component.component";
 
 const routes: Routes = [
 
@@ -14,6 +17,7 @@ const routes: Routes = [
   {path:'detailproduct/:id', component:DetailproductComponent},
   {path:'offres', component:OffresEmploiComponentComponent},
   {path:'artticles', component:ArticlesComponentComponent},
+  {path:'TDFC', component:TemplateDrivenFormComponentComponent},
   {path:'addproduct', component:AddproductComponent},
   {path: '**', component: NotfoundComponent}
 ];
