@@ -12,6 +12,7 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { DetailproductComponent } from './detailproduct/detailproduct.component';
 import { AddproductComponent } from './addproduct/addproduct.component';
 import { TemplateDrivenFormComponentComponent } from './template-driven-form-component/template-driven-form-component.component';
+import { ProductItemComponent } from './product-item/product-item.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { TemplateDrivenFormComponentComponent } from './template-driven-form-com
     NotfoundComponent,
     DetailproductComponent,
     AddproductComponent,
-    TemplateDrivenFormComponentComponent
+    TemplateDrivenFormComponentComponent,
+    ProductItemComponent
   ],
   imports: [
     BrowserModule,

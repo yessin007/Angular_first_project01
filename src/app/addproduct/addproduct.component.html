@@ -11,7 +11,7 @@
 
   <div class="form-group">
     <label>Title</label>
-    <input type="string" class="form-control" name="title" [(ngModel)]="product.title" placeholder="Enter Title" pattern="[A-Za-z]{3}" required minlength="3"  #title="ngModel">
+    <input type="string" class="form-control" name="title" [(ngModel)]="product.title" placeholder="Enter Title" pattern="[A-Za-z]{3,}" required minlength="3"  #title="ngModel">
     <div  class="alert alert-danger" *ngIf="title.invalid && title.touched">
 
       <div *ngIf="title.errors?.['minlength']"> Title min Lenght = 3 !</div>
@@ -42,7 +42,7 @@
   </div>
 
 
-  <button type="submit" class="btn btn-primary" [disabled]="f.invalid">Submit</button>
+  <button type="submit" class="btn btn-primary" (click)="ajouter(product)" [disabled]="f.invalid">Submit</button>
 </form>
 
 {{product.id}}

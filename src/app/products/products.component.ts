@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Product} from "../core/product";
+import {ProductService} from "../services/product.service";
+import {CalculService} from "../services/calcul.service";
 
 
 @Component({
@@ -8,20 +10,12 @@ import {Product} from "../core/product";
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
+  criteria !: string ;
+  value !: any;
+
   product!: Product [];
   categorie : string = "Homme";
   price : number=0;
-
-  /*
-  products : any [] =[
-    {id:1, title: 'T-shirt 1', price :18,quantity :5, like:25, ye:56},
-    {id:2, title: 'T-shirt 2', price :2,quantity :10, like:56},
-    {id:3, title: 'T-shirt 3', price :165,quantity :78, like:69},
-  ];
-
-
-   */
-
 
 
   getColor(){
@@ -62,17 +56,21 @@ export class ProductsComponent implements OnInit {
   like(i:number){
     this.product[i].like +=1;
   }
-  constructor() { }
+  constructor(private serviceProduct: ProductService, private serviceCalcul:CalculService) {
+  }
 
   ngOnInit(): void {
+    this.product = this.serviceProduct.product;
 
-    this.product = [
-      {id:"1", title: 'T-shirt 1', price :18,quantity :5, like:25},
-      {id:"2", title: 'T-shirt 2', price :2,quantity :10, like:56},
-      {id:"3", title: 'T-shirt 3', price :165,quantity :78, like:69}
 
-    ]
 
+  }
+
+  getNumber ():number
+  {
+    let number=0;
+    number = this.serviceCalcul.getNumberOf(this.product,this.criteria,this.value)
+    return number;
   }
 
 
