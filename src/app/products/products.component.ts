@@ -48,12 +48,14 @@ export class ProductsComponent implements OnInit {
     }
 
 
-  buy(i:number){
+  buy(p:Product){
+    let i = this.product.indexOf(p)
     this.product[i].quantity -=1;
-  //p.quantity-=1;
+
   }
 
-  like(i:number){
+  like(p:Product){
+    let i = this.product.indexOf(p)
     this.product[i].like +=1;
   }
   constructor(private serviceProduct: ProductService, private serviceCalcul:CalculService) {
