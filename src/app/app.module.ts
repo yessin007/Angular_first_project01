@@ -13,6 +13,7 @@ import { DetailproductComponent } from './detailproduct/detailproduct.component'
 import { AddproductComponent } from './addproduct/addproduct.component';
 import { TemplateDrivenFormComponentComponent } from './template-driven-form-component/template-driven-form-component.component';
 import { ProductItemComponent } from './product-item/product-item.component';
+import {HttpClientModule} from "@angular/common/http";
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { ProductItemComponent } from './product-item/product-item.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule
 
   ],
   providers: [],

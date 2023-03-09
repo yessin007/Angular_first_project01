@@ -1,6 +1,6 @@
 
 export class Product {
-  id!:string;
+  id!:number;
   title!:string;
   price!:number;
   like!:number;

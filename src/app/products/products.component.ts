@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Product} from "../core/product";
 import {ProductService} from "../services/product.service";
 import {CalculService} from "../services/calcul.service";
+import {ConsumerProductService} from "../services/consumer-product.service";
 
 
 @Component({
@@ -58,11 +59,14 @@ export class ProductsComponent implements OnInit {
     let i = this.product.indexOf(p)
     this.product[i].like +=1;
   }
-  constructor(private serviceProduct: ProductService, private serviceCalcul:CalculService) {
+  constructor(private serviceProduct: ProductService, private serviceCalcul:CalculService, private consumerProdcut:ConsumerProductService) {
   }
 
   ngOnInit(): void {
-    this.product = this.serviceProduct.product;
+    //this.product = this.serviceProduct.product;
+    this.consumerProdcut.GetProducts().subscribe({
+      next:(data)=>this.product=data,
+    })
 
 
 
@@ -73,6 +77,14 @@ export class ProductsComponent implements OnInit {
     let number=0;
     number = this.serviceCalcul.getNumberOf(this.product,this.criteria,this.value)
     return number;
+  }
+
+  deleteProduct(id : number) {
+
+    this.consumerProdcut.DeleteProduct(id).subscribe({
+      next:()=>this.ngOnInit()
+    })
+
   }
 
 

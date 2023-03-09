@@ -9,7 +9,8 @@
       </p>
       <button class="btn btn-info" [routerLink]="['/detailproduct',p.id]">Plus de détail</button>
       <button class="btn btn-primary"[disabled]="p.quantity<=0" (click)="sendNotif1()"  > buy </button>
-      <button class="btn btn-primary" [disabled]="p.like<=23" (click)="sendNotif()" > Like !!</button>
+      <button class="btn btn-primary"  (click)="sendNotif()" > Like !!</button>
+      <button class="btn btn-primary" (click)="deleteProductt(p.id)"> Delete</button>
       <a href="#" class="btn btn-primary">Go somewhere</a>
     </div>
 
